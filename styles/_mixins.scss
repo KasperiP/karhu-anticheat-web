@@ -1,0 +1,18 @@
+@mixin widthContainer() {
+	width: 1190px;
+	max-width: 95%;
+	margin: auto;
+}
+
+@mixin flexContainer($direction: row, $justify: space-between, $align: center) {
+	display: flex;
+	flex-direction: $direction;
+	align-items: $align;
+	justify-content: $justify;
+}
+
+@mixin imgContainer($height: 60px, $width: 80px) {
+	position: relative;
+	width: $width;
+	height: $height;
+}
