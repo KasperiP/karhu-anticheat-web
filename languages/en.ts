@@ -77,7 +77,7 @@ const lang = {
 		card2: {
 			title: 'Still unsure? Purchase trial first!',
 			desc_title: 'Trial',
-			desc_duration: '14 days plan',
+			desc_duration: '7 days plan',
 			desc_purchase: 'Purchase trial plan',
 			price: '5€',
 			features: [
