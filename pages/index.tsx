@@ -1,9 +1,9 @@
 import type { NextPage } from 'next'
-import Features from '../components/Features/Features'
-import Hero from '../components/Hero/Hero'
-import Layout from '../components/Layout/Layout'
-import Pricing from '../components/Pricing/Pricing'
-import Sponsor from '../components/Sponsor/Sponsor'
+import Layout from '../components/common/Layout/Layout'
+import Features from '../components/home/Features/Features'
+import Hero from '../components/home/Hero/Hero'
+import Pricing from '../components/home/Pricing/Pricing'
+import Sponsor from '../components/home/Sponsor/Sponsor'
 
 const Home: NextPage = () => {
     return (

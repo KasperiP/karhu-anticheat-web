@@ -1,38 +1,40 @@
 html,
 body {
-	font-family: Roboto, sans-serif;
-	line-height: 1.55;
+    font-family: Roboto, sans-serif;
+    line-height: 1.55;
 }
 
 :root {
-	--text-main: #495057;
-	--text-secondary: #fff;
-	--highlight-main: #1c7ed6;
-	--border-radius: 8px;
+    --text-main: #495057;
+    --text-secondary: #fff;
+    --highlight-main: #1f6aac;
+    --border-radius: 8px;
+    --breakpoint-md: 768px;
+    --breakpoint-xl: 1200px;
 }
 
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-	color: inherit;
-	text-decoration: none;
+    color: inherit;
+    text-decoration: none;
 }
 
 button {
-	border: none;
-	outline: none;
-	cursor: pointer;
-	transition: filter 0.15s ease-in-out;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: filter 0.15s ease-in-out;
 
-	&:hover {
-		filter: brightness(90%);
-	}
+    &:hover {
+        filter: brightness(90%);
+    }
 }
 
 ul {
-	list-style: none;
+    list-style: none;
 }

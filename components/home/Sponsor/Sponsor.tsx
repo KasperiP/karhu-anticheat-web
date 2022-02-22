@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { useContext } from 'react'
-import LanguageContext from '../../context/LanguageContext'
+import LanguageContext from '../../../context/LanguageContext'
 import styles from './Sponsor.module.scss'
 
 const Sponsor = () => {

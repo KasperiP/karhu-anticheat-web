@@ -5,7 +5,7 @@ import { useContext, useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { FaDiscord } from 'react-icons/fa'
 import { RiArrowDropDownLine } from 'react-icons/ri'
-import LanguageContext from '../../context/LanguageContext'
+import LanguageContext from '../../../context/LanguageContext'
 import styles from './Navbar.module.scss'
 
 const Navbar = () => {
@@ -31,7 +31,7 @@ const Navbar = () => {
                     >
                         <Link href={router.asPath} locale={'fi'} passHref>
                             <p onClick={() => setLanguageMenu(!languageMenu)}>
-                                Finnish
+                                Suomi
                             </p>
                         </Link>
                         <Link href={router.asPath} locale={'en'} passHref>
@@ -49,7 +49,10 @@ const Navbar = () => {
         <nav className={styles.wrapper}>
             <div className={styles.container}>
                 <div>
-                    <span className={styles.imgContainer}>
+                    <span
+                        className={styles.imgContainer}
+                        onClick={() => router.push('/')}
+                    >
                         <Image
                             src="/logo.svg"
                             alt="KarhuAC-logo"
@@ -59,10 +62,12 @@ const Navbar = () => {
                     </span>
                 </div>
                 <div className={`${styles.desktop} ${styles.links}`}>
-                    <Link href="#">{t.nav.home}</Link>
-                    <Link href="#">{t.nav.features}</Link>
-                    <Link href="#">{t.nav.pricing}</Link>
-                    <Link href="#">{t.nav.developers}</Link>
+                    <Link href="/">{t.nav.home}</Link>
+                    <Link href="/features">{t.nav.features}</Link>
+                    <Link href="/">{t.nav.pricing}</Link>
+                    <Link href="https://github.com/Karhu-Anticheat/KarhuAPI">
+                        {t.nav.developers}
+                    </Link>
                 </div>
                 <div className={`${styles.buttons} ${styles.desktop}`}>
                     <LangBtn />

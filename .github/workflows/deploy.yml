@@ -1,0 +1,54 @@
+name: Build and Deploy
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+    push:
+        branches: [main]
+    workflow_dispatch:
+        inputs:
+            logLevel:
+                description: 'Log level'
+                required: true
+                default: 'warning'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+    # This workflow contains a single job called "build"
+    build:
+        # The type of runner that the job will run on
+        runs-on: ubuntu-latest
+        container: node:14
+
+        # Steps represent a sequence of tasks that will be executed as part of the job
+        steps:
+            # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+            - uses: actions/checkout@v2
+
+            - name: Build and Publish to Github Packages Registry
+              uses: elgohr/Publish-Docker-Github-Action@master
+              with:
+                  name: kasperip/karhuanticheatweb/nextjs
+                  registry: ghcr.io
+                  username: ${{ secrets.GIT_USERNAME }}
+                  password: ${{ secrets.GIT_TOKEN }}
+                  dockerfile: Dockerfile
+                  tags: latest
+
+            - name: Deploy package to VPS
+              uses: appleboy/ssh-action@master
+              env:
+                  GITHUB_USERNAME: ${{ secrets.GIT_USERNAME }}
+                  GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+              with:
+                  host: ${{ secrets.HOST }}
+                  username: ${{ secrets.USERNAME }}
+                  password: ${{ secrets.PASSWORD }}
+                  port: 22
+                  envs: GITHUB_USERNAME, GITHUB_TOKEN
+                  script: |
+                      docker login ghcr.io -u $GITHUB_USERNAME -p $GITHUB_TOKEN
+                      docker pull ghcr.io/kasperip/karhuanticheatweb/nextjs:latest
+                      docker stop karhuanticheatweb
+                      docker system prune -f
+                      docker run --name karhuanticheatweb -dit -p 3000:3000 ghcr.io/kasperip/karhuanticheatweb/nextjs:latest

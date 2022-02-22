@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useContext } from 'react'
-import LanguageContext from '../../context/LanguageContext'
+import LanguageContext from '../../../context/LanguageContext'
 import styles from './Footer.module.scss'
 
 const Footer = () => {

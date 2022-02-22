@@ -4,7 +4,7 @@ import { BiSupport } from 'react-icons/bi'
 import { BsFillGearFill } from 'react-icons/bs'
 import { FaGhost } from 'react-icons/fa'
 import { GiFeatheredWing, GiSwordInStone } from 'react-icons/gi'
-import LanguageContext from '../../context/LanguageContext'
+import LanguageContext from '../../../context/LanguageContext'
 import styles from './Features.module.scss'
 
 const Features = () => {

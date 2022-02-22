@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useContext } from 'react'
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import { IoIosCheckmark } from 'react-icons/io'
-import LanguageContext from '../../context/LanguageContext'
+import LanguageContext from '../../../context/LanguageContext'
 import styles from './Pricing.module.scss'
 
 const Pricing = () => {
@@ -58,7 +58,7 @@ const Pricing = () => {
                             </div>
                             <div className={styles.btnContainer}>
                                 <div>
-                                    <Link href="#">
+                                    <Link href="/features">
                                         {t.pricing.card_plan_view_features}
                                     </Link>
                                     <AiOutlineArrowRight />
@@ -109,7 +109,7 @@ const Pricing = () => {
                             </div>
                             <div className={styles.btnContainer}>
                                 <div>
-                                    <Link href="#">
+                                    <Link href="/features">
                                         {t.pricing.card_plan_view_features}
                                     </Link>
                                     <AiOutlineArrowRight />
