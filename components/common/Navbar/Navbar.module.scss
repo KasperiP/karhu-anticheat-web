@@ -53,7 +53,7 @@
     font-weight: 500;
     cursor: pointer;
 
-    @media (max-width: var(--breakpoint-md)) {
+    @media (max-width: 768px) {
         font-size: 1.2rem;
     }
 
@@ -83,7 +83,7 @@
     }
 }
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
     .desktop {
         display: none !important;
     }
@@ -95,7 +95,7 @@
 
 .mobileOpen {
     display: flex;
-    @media (min-width: var(--breakpoint-md)) {
+    @media (min-width: 768px) {
         display: none;
     }
 }

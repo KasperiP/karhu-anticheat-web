@@ -33,11 +33,11 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
 
-    @media (max-width: var(--breakpoint-xl)) {
+    @media (max-width: 1200px) {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (max-width: var(--breakpoint-md)) {
+    @media (max-width: 768px) {
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -64,7 +64,7 @@
     p {
         text-align: right;
 
-        @media (max-width: var(--breakpoint-xl)) {
+        @media (max-width: 1200px) {
             text-align: left;
         }
 

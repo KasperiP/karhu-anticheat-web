@@ -37,18 +37,18 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 
-    @media (max-width: var(--breakpoint-xl)) {
+    @media (max-width: 1200px) {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (max-width: var(--breakpoint-md)) {
+    @media (max-width: 768px) {
         grid-template-columns: repeat(1, 1fr);
     }
 
     > div:nth-child(2n) {
         margin-top: 15px;
 
-        @media (max-width: var(--breakpoint-md)) {
+        @media (max-width: 768px) {
             margin-top: 0;
         }
     }
