@@ -9,7 +9,7 @@ const Pricing = () => {
     const { t } = useContext(LanguageContext)
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} id="pricing">
             <h2>{t.pricing.card_pricing}</h2>
             <p>{t.pricing.card_pricing_subtitle}</p>
             <div className={styles.gridContainer}>

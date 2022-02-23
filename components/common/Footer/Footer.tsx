@@ -20,15 +20,10 @@ const Footer = () => {
                                 objectFit="contain"
                             />
                         </div>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Accusamus sapiente vitae perspiciatis harum
-                            nostrum, neque quisquam esse quaerat consectetur
-                            nesciunt.
-                        </p>
+                        <p>{t.footer.text}</p>
                     </div>
                     <div>
-                        <h2>Links</h2>
+                        <h2>{t.footer.links_title}</h2>
                         <ul>
                             {t.footer.links.map((link, index) => (
                                 <li key={index}>
@@ -38,7 +33,7 @@ const Footer = () => {
                         </ul>
                     </div>
                     <div>
-                        <h2>Legal</h2>
+                        <h2>{t.footer.legal_title}</h2>
                         <ul>
                             {t.footer.legal.map((link, index) => (
                                 <li key={index}>

@@ -34,6 +34,10 @@
         font-size: 3rem;
         line-height: 1.3;
 
+        @media (max-width: 768px) {
+            font-size: 2rem;
+        }
+
         span {
             background: linear-gradient(
                 52deg,
@@ -93,4 +97,7 @@
     position: relative;
     width: 100%;
     height: 45rem;
+    @media (max-width: 768px) {
+        height: 30rem;
+    }
 }

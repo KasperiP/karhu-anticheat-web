@@ -64,9 +64,9 @@ const Navbar = () => {
                 <div className={`${styles.desktop} ${styles.links}`}>
                     <Link href="/">{t.nav.home}</Link>
                     <Link href="/features">{t.nav.features}</Link>
-                    <Link href="/">{t.nav.pricing}</Link>
+                    <Link href="/#pricing">{t.nav.pricing}</Link>
                     <Link href="https://github.com/Karhu-Anticheat/KarhuAPI">
-                        {t.nav.developers}
+                        <a target={'_blank'}>{t.nav.developers}</a>
                     </Link>
                 </div>
                 <div className={`${styles.buttons} ${styles.desktop}`}>
@@ -95,14 +95,16 @@ const Navbar = () => {
                     navbarOpen ? styles.mobileOpen : styles.mobileClosed
                 }`}
             >
-                <Link href="#">Home</Link>
-                <Link href="#">Features</Link>
-                <Link href="#">Pricing</Link>
-                <Link href="#">Developers</Link>
+                <Link href="/">{t.nav.home}</Link>
+                <Link href="/features">{t.nav.features}</Link>
+                <Link href="/">{t.nav.pricing}</Link>
+                <Link href="https://github.com/Karhu-Anticheat/KarhuAPI">
+                    <a target={'_blank'}>{t.nav.developers}</a>
+                </Link>
                 <Link href="https://discord.gg/cMY4xKRrW4" passHref>
                     <a target="_blank">Discord</a>
                 </Link>
-                <button>Purchase</button>
+                <button>{t.nav.purchase}</button>
             </div>
         </nav>
     )

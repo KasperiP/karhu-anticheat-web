@@ -48,8 +48,7 @@
         background-image: url('/wave.svg');
         background-position: 0 -60px;
         background-repeat: no-repeat;
-        box-shadow: 0 1px 3px rgb(0 0 0 / 5%), rgb(0 0 0 / 5%) 0 20px 25px -5px,
-            rgb(0 0 0 / 4%) 0 10px 10px -5px;
+        box-shadow: 0 3px 3px 3px rgb(128 128 128 / 5%);
     }
 }
 
@@ -167,8 +166,7 @@
 
 .premium {
     background-color: var(--highlight-main);
-    box-shadow: 0 1px 3px rgb(0 0 0 / 5%), rgb(0 0 0 / 5%) 0 20px 25px -5px,
-        rgb(0 0 0 / 4%) 0 10px 10px -5px;
+    box-shadow: 0 3px 3px 3px rgb(128 128 128 / 5%);
 
     > div {
         color: var(--text-secondary);
@@ -190,8 +188,7 @@
 }
 
 .trial {
-    box-shadow: 0 1px 3px rgb(0 0 0 / 5%), rgb(0 0 0 / 5%) 0 20px 25px -5px,
-        rgb(0 0 0 / 4%) 0 10px 10px -5px;
+    box-shadow: 0 3px 3px 3px rgb(128 128 128 / 5%);
 
     > div {
         color: var(--text-main);
