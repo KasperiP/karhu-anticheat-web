@@ -15,7 +15,7 @@ const lang = {
         title_end: 'for your server',
 
         subtitle:
-            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit est voluptates quas excepturi praesentium perspiciatis beatae veniam dolores nesciunt eligendi.',
+            'Lightweight, customizable and reliable anticheat solution for 1.7-1.18',
 
         button_left: 'View our pricing',
         button_right: 'Discord server',
@@ -29,32 +29,32 @@ const lang = {
             {
                 title: 'Advanced checks',
                 subtitle:
-                    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quod accusantium suscipit voluptatum eum quibusdam pariatur dolore eaque rem eveniet?',
+                    'Our checks try to simulate minecraft game actions, with simplier code. Movement checks are not 1:1 accurate, but we aim for still good accuracy.',
             },
             {
-                title: 'Advanced checks',
+                title: 'Fast support',
                 subtitle:
-                    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quod accusantium suscipit voluptatum eum quibusdam pariatur dolore eaque rem eveniet?',
+                    'Our support team is fast, and will be pleased to answer your questions on our discord.',
             },
             {
-                title: 'Advanced checks',
+                title: 'Lightweight',
                 subtitle:
-                    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quod accusantium suscipit voluptatum eum quibusdam pariatur dolore eaque rem eveniet?',
+                    "We aim to leave minimal mark of usage on the main thread. Same thing also on our own threads. Karhu shouldn't affect your server's performance.",
             },
             {
-                title: 'Advanced checks',
+                title: 'Ghost detections',
                 subtitle:
-                    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quod accusantium suscipit voluptatum eum quibusdam pariatur dolore eaque rem eveniet?',
+                    'Karhu is very good at detecting ghost cheaters. Picking up 3.01 reach and 99.99% horizontal & vertical velocity.',
             },
             {
-                title: 'Advanced checks',
+                title: 'Customizability',
                 subtitle:
-                    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quod accusantium suscipit voluptatum eum quibusdam pariatur dolore eaque rem eveniet?',
+                    'Karhu offers you a great amount of customization, wether it be the anticheat name or changing messages.',
             },
             {
-                title: 'Advanced checks',
+                title: 'Packet based',
                 subtitle:
-                    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quod accusantium suscipit voluptatum eum quibusdam pariatur dolore eaque rem eveniet?',
+                    'Unlike some other anticheats on this market, we track stuff with packets and not with spigot api or bukkit events.',
             },
         ],
     },
@@ -65,13 +65,13 @@ const lang = {
         card_looking_download_end: 'Join to our',
         card_pricing: 'Our pricing',
         card_pricing_subtitle:
-            'We have very competitive pricing compared to some other anticheats.',
+            'We have highly competitive pricing compared to some other anticheats.',
 
         card1: {
             desc_title_start: 'Ready to stop',
             desc_title_highlight: 'cheaters',
             desc_subtitle_start:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati consectetur possimus fuga nulla unde quibusdam molestiae cum labore atque earum?',
+                'We want to offer you a cheap and reliable way to stop cheaters ruining your players experience.',
             desc_subtitle_end:
                 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, voluptatem.',
         },
