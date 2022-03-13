@@ -8,6 +8,7 @@ const nextConfig = {
     experimental: {
         outputStandalone: true,
     },
+    poweredByHeader: false,
 }
 
 module.exports = nextConfig
