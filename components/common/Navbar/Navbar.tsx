@@ -14,6 +14,17 @@ const Navbar = () => {
     const [languageMenu, setLanguageMenu] = useState(false)
     const router = useRouter()
 
+    const supportedLanguages = [
+        { locale: 'en', name: 'English' },
+        { locale: 'fi', name: 'Suomi' },
+    ]
+
+    const handleLangChange = (locale: string) => {
+        document.cookie = `NEXT_LOCALE=${locale}; expires=Thu, 18 Dec 9999 12:00:00 UTC`
+        router.push(router.asPath, router.asPath, { locale: locale })
+        setLanguageMenu(false)
+    }
+
     const LangBtn = () => {
         return (
             <>
@@ -29,16 +40,14 @@ const Navbar = () => {
                                 : styles.langMenuClosed
                         }`}
                     >
-                        <Link href={router.asPath} locale={'fi'} passHref>
-                            <p onClick={() => setLanguageMenu(!languageMenu)}>
-                                Suomi
-                            </p>
-                        </Link>
-                        <Link href={router.asPath} locale={'en'} passHref>
-                            <p onClick={() => setLanguageMenu(!languageMenu)}>
-                                English
-                            </p>
-                        </Link>
+                        {supportedLanguages.map((lang) => (
+                            <span
+                                key={lang.locale}
+                                onClick={() => handleLangChange(lang.locale)}
+                            >
+                                {lang.name}
+                            </span>
+                        ))}
                     </div>
                 </span>
             </>

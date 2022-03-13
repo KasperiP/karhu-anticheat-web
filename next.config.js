@@ -4,7 +4,6 @@ const nextConfig = {
     i18n: {
         locales: ['en', 'fi'],
         defaultLocale: 'en',
-        localeDetection: false,
     },
     experimental: {
         outputStandalone: true,

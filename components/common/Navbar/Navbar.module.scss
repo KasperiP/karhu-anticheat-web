@@ -150,16 +150,24 @@
     top: 4rem;
     right: 0;
     flex-direction: column;
-    width: 10rem;
+    width: 8rem;
     padding: 10px;
     border-radius: var(--border-radius);
     background-color: #fff;
     color: var(--text-main);
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 20px 40px rgb(0 0 0 / 20%);
 
-    a {
-        color: var(--text-secondary);
+    span {
+        padding: 0.5rem 0;
+        border-radius: var(--border-radius);
+        background-color: transparent;
+        color: var(--text-main);
         font-weight: 500;
+        text-align: center;
         cursor: pointer;
+
+        &:hover {
+            background-color: rgb(128 128 128 / 8.2%);
+        }
     }
 }
