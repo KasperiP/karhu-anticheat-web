@@ -51,4 +51,4 @@ jobs:
                       docker pull ghcr.io/kasperip/karhuanticheatweb/nextjs:latest
                       docker stop karhuanticheatweb
                       docker system prune -f
-                      docker run --name karhuanticheatweb -dit -p 3000:3000 ghcr.io/kasperip/karhuanticheatweb/nextjs:latest
+                      docker run --name karhuanticheatweb -dit -p 3000:3000 --env-file ~/karhu-env/.env.local ghcr.io/kasperip/karhuanticheatweb/nextjs:latest
