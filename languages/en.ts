@@ -54,7 +54,7 @@ const lang = {
             {
                 title: 'Packet based',
                 subtitle:
-                    'Unlike some other anticheats on this market, we track stuff with packets and not with spigot api or bukkit events.',
+                    'Unlike some other anticheats on the market, we track stuff with packets and not with spigot api or bukkit events.',
             },
         ],
     },
