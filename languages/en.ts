@@ -24,7 +24,7 @@ const lang = {
     features: {
         title: 'What do we offer for you?',
         subtitle:
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis recusandae necessitatibus ullam repellat ratione saepe, nihil rem dicta explicabo iste mollitia architecto culpa earum eum aut? Quam possimus quibusdam voluptatem!',
+            'Karhu team wants to offer you the best anticheat experience for low pricing, it all started from a network that didnt want to pay too much for an anticheat.',
         list: [
             {
                 title: 'Advanced checks',
@@ -73,7 +73,7 @@ const lang = {
             desc_subtitle_start:
                 'We want to offer you a cheap and reliable way to stop cheaters ruining your players experience.',
             desc_subtitle_end:
-                'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, voluptatem.',
+                'Your players can feel better when they know that other players are not cheating either.',
         },
         card2: {
             title: 'Still unsure? Purchase trial first!',
@@ -106,7 +106,7 @@ const lang = {
         button: "Let's check it out",
     },
     footer: {
-        text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus sapiente vitae perspiciatis harum nostrum, neque quisquam esse quaerat consectetur nesciunt.',
+        text: 'Karhu anticheat was started in summer 2020. Made with love by Johannes & Kassq',
         links_title: 'Links',
         legal_title: 'Legal',
         links: [
