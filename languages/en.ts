@@ -83,7 +83,7 @@ const lang = {
             price: '5€',
             features: [
                 'Way to test Karhu on your own server without paying full price',
-                'Same premium experince for limited time with only 5$',
+                'Same premium experince for limited time with only 5€',
             ],
         },
         card3: {
