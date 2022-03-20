@@ -34,6 +34,10 @@ const customerSchema = new mongoose.Schema(
             type: Date,
             default: null,
         },
+        activated: {
+            default: false,
+            type: Boolean,
+        },
     },
     {
         timestamps: true,

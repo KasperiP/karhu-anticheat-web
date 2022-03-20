@@ -1,10 +1,12 @@
 import mail from '@sendgrid/mail'
+import { MessageEmbed, WebhookClient } from 'discord.js'
 import { buffer } from 'micro'
 import Cors from 'micro-cors'
 import { NextApiRequest, NextApiResponse } from 'next'
 import Stripe from 'stripe'
 import dbConnect from '../../../lib/db/dbConnect'
 import { generateLicense } from '../../../lib/generate-license'
+import Customers from '../../../models/customerModel'
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
     // https://github.com/stripe/stripe-node#configuration
@@ -49,7 +51,36 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
         // Cast event data to Stripe object.
         if (event.type === 'payment_intent.succeeded') {
+            console.log('💰 Payment succeeded')
+
             const paymentIntent = event.data.object as Stripe.PaymentIntent
+            const charge = paymentIntent.charges.data[0]
+
+            const userEmail = charge.billing_details.email
+
+            const webhookClient = new WebhookClient({
+                url: process.env.DISCORD_WEBHOOK_URL!,
+            })
+
+            if (!userEmail) {
+                console.log('❌ No email found')
+                return webhookClient.send({
+                    content: 'Payment succeeded but no email found! @everyone',
+                })
+            }
+
+            const embed = new MessageEmbed()
+                .setTitle('💰 Payment succeeded')
+                .setColor('#00ff00')
+                .setDescription(
+                    `Payment for ${paymentIntent.amount / 100}€ was successful.`
+                )
+                .addField('Email', userEmail)
+                .setTimestamp()
+
+            await webhookClient.send({
+                embeds: [embed],
+            })
 
             await dbConnect()
 
@@ -57,24 +88,52 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
             const license = await generateLicense(5, 5)
 
+            // Check if price is 25€ === premium
+            const isPremium = paymentIntent.amount === 2500
+
+            // Create expiry date which is 7 days from now
+            const expiryDate = new Date(
+                new Date().getTime() + 7 * 24 * 60 * 60 * 1000
+            )
+
+            // Create new customer
+            const customer = new Customers({
+                email: userEmail,
+                license: license,
+                expiresAt: isPremium ? null : expiryDate,
+                activated: false,
+                hwid_list: [],
+                ip_list: [],
+            })
+
+            await customer.save()
+
             // prettier-ignore
             const message = `
-                Hello ${paymentIntent.metadata.name} and thank you for purchasing ${paymentIntent.metadata.item}!\r\n
+                Hello ${userEmail} and thank you for purchasing Karhu Anticheat!\r\n
                 Here is your license key: ${license}
-                Your order ID: ${paymentIntent.metadata.order_id}.\r\n
             `
 
             //TODO: Discord webhook
 
             const data = {
-                to: paymentIntent.metadata.email,
+                to: userEmail,
                 from: 'noreply@karhu.ac',
                 subject: 'Your Karhu Anticheat license key!',
                 text: message,
                 html: message.replace(/\r\n/g, '<br>'),
             }
 
-            return mail.send(data)
+            try {
+                await mail.send(data)
+                return res.status(200).json({
+                    message: 'License key sent to email',
+                    email: userEmail,
+                    license: license,
+                })
+            } catch (error) {
+                console.log('Error while sending email: ', error)
+            }
         } else {
             console.warn(`🤷‍♀️ Unhandled event type: ${event.type}`)
         }

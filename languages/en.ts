@@ -15,7 +15,7 @@ const lang = {
         title_end: 'for your server',
 
         subtitle:
-            'Lightweight, customizable and reliable anticheat solution for 1.7-1.18',
+            'Lightweight, customizable and reliable minecraft anticheat solution for 1.7-1.18. Test on our server test.karhu.ac or buy the trial package to test on your own server!',
 
         button_left: 'View our pricing',
         button_right: 'Discord server',
@@ -106,7 +106,7 @@ const lang = {
         button: "Let's check it out",
     },
     footer: {
-        text: 'Karhu anticheat was started in summer 2020. Made with love by Johannes & Kassq',
+        text: 'Providing cheap anticheat service since 2020.',
         links_title: 'Links',
         legal_title: 'Legal',
         links: [

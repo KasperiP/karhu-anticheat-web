@@ -43,7 +43,17 @@ export default async function handler(
                 payment_method_types:
                     process.env.NODE_ENV === 'development'
                         ? ['card']
-                        : ['card'],
+                        : [
+                              'card',
+                              'alipay',
+                              'klarna',
+                              'bancontact',
+                              'giropay',
+                              'p24',
+                              'eps',
+                              'sepa_debit',
+                              'ideal',
+                          ],
                 line_items: [item === 'trial' ? trial : premium],
                 success_url: `${req.headers.origin}/result?session_id={CHECKOUT_SESSION_ID}`,
                 cancel_url: `${req.headers.origin}`,

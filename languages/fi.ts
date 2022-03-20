@@ -14,7 +14,7 @@ const lang = {
         title_end: 'sinun palvelimellesi',
 
         subtitle:
-            'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit est voluptates quas excepturi praesentium perspiciatis beatae veniam dolores nesciunt eligendi.',
+            'Kevyt, mukautettava sekä luotettava anticheat järjestelmä 1.7-1.18 palvelimille. Karhun tiimi takaa anticheatille pitkäkestoisen elinkaaren.',
 
         button_left: 'Hinnoittelu',
         button_right: 'Discord palvelin',
@@ -23,37 +23,37 @@ const lang = {
     features: {
         title: 'Mitä tarjoamme sinulle?',
         subtitle:
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis recusandae necessitatibus ullam repellat ratione saepe, nihil rem dicta explicabo iste mollitia architecto culpa earum eum aut? Quam possimus quibusdam voluptatem!',
+            'Karhun tiimi haluua tarjota sinulle parhaan mahdollisen minecraft anticheat kokemuksen alhaisessa hintaluokassa. Kaikki alkoi palvelmesta, jossa ei haluttu maksaa paljoa anticheatista.',
         list: [
             {
                 title: 'Kehittyneet tarkistukset',
                 subtitle:
-                    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quod accusantium suscipit voluptatum eum quibusdam pariatur dolore eaque rem eveniet?',
+                    'Karhun tarkistukset yrittävät replikoida minecraftin toimintoja. Liike tarkistuksr eivät ole 1:1, mutta yritämme päästä lähelle sitä.',
             },
             {
-                title: 'Advanced checks',
+                title: 'Nopea asiakaspalvelu',
                 subtitle:
-                    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quod accusantium suscipit voluptatum eum quibusdam pariatur dolore eaque rem eveniet?',
+                    'Asiakaspalvelumme vastaa aina nopeasti suomeksi sekä englanniksi.',
             },
             {
-                title: 'Advanced checks',
+                title: 'Höyhenen kevyt',
                 subtitle:
-                    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quod accusantium suscipit voluptatum eum quibusdam pariatur dolore eaque rem eveniet?',
+                    'Karhu ei käytä paljon resursseja palvelimeltasi. Olemme satsanneet tuotteen nopeuteen.',
             },
             {
-                title: 'Advanced checks',
+                title: 'Alhaiset tunnistukset',
                 subtitle:
-                    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quod accusantium suscipit voluptatum eum quibusdam pariatur dolore eaque rem eveniet?',
+                    'Karhu on tarkka ja hyvä tunnistamaan erilaisia "ghost" huijaus toimintoja. Tunnistaen 3.01 reachin and 99.99% horisontaalisen & vertikaalisen knockbackin.',
             },
             {
-                title: 'Advanced checks',
+                title: 'Mukautettavuus',
                 subtitle:
-                    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quod accusantium suscipit voluptatum eum quibusdam pariatur dolore eaque rem eveniet?',
+                    'Karhussa voit muuttaa lähes kaiken, aina nimestä viesteihin.',
             },
             {
-                title: 'Advanced checks',
+                title: 'Paketti pohjainen',
                 subtitle:
-                    'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem quod accusantium suscipit voluptatum eum quibusdam pariatur dolore eaque rem eveniet?',
+                    'Karhu perustuu paketteihin, eikä käytä bukkitin rajapintaa toisin kuin useat muut anticheatit.',
             },
         ],
     },
@@ -93,8 +93,8 @@ const lang = {
             features: [
                 'Yli 100 tarkistusta',
                 'Nopea asiakaspalvelu',
-                'High customizability',
-                'Constant updates',
+                'Korkea muokattavuus',
+                'Päivityksiä tasaisinvälein',
             ],
         },
     },

@@ -12,7 +12,18 @@ const features = () => {
                 />
             </Head>
             <Layout>
-                <p>s</p>
+                <div
+                    style={{
+                        display: 'flex',
+                        textAlign: 'center',
+                        justifyContent: 'center',
+                    }}
+                >
+                    <h1 style={{ padding: '10rem 5rem' }}>
+                        I dont get paid enough. Pullrequest welcome of feature
+                        section :D <br />- kassq
+                    </h1>
+                </div>
             </Layout>
         </>
     )
