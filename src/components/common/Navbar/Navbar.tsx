@@ -111,7 +111,7 @@ const Navbar = () => {
             >
                 <Link href="/">{t.nav.home}</Link>
                 <Link href="/features">{t.nav.features}</Link>
-                <Link href="/">{t.nav.pricing}</Link>
+                <Link href="/#pricing">{t.nav.pricing}</Link>
                 <Link href="https://github.com/Karhu-Anticheat/KarhuAPI">
                     <a target={'_blank'}>{t.nav.developers}</a>
                 </Link>
