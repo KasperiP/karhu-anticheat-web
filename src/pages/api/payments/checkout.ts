@@ -51,7 +51,6 @@ export default async function handler(
                               'giropay',
                               'p24',
                               'eps',
-                              'sepa_debit',
                               'ideal',
                           ],
                 line_items: [item === 'trial' ? trial : premium],
