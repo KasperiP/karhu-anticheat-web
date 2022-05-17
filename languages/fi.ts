@@ -14,7 +14,7 @@ const lang = {
         title_end: 'sinun palvelimellesi',
 
         subtitle:
-            'Kevyt, mukautettava sekä luotettava anticheat järjestelmä 1.7-1.18 palvelimille. Karhun tiimi takaa anticheatille pitkäkestoisen elinkaaren.',
+            'Kevyt, mukautettava sekä luotettava anticheat järjestelmä 1.8-1.18 palvelimille. Karhun tiimi takaa anticheatille pitkäkestoisen elinkaaren.',
 
         button_left: 'Hinnoittelu',
         button_right: 'Discord palvelin',
