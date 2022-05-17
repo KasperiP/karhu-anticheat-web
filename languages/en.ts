@@ -15,7 +15,7 @@ const lang = {
         title_end: 'for your server',
 
         subtitle:
-            'Lightweight, customizable and reliable minecraft anticheat solution for 1.7-1.18. Test on our server test.karhu.ac or buy the trial package to test on your own server!',
+            'Lightweight, customizable and reliable minecraft anticheat solution for 1.8-1.18. Test on our server test.karhu.ac or buy the trial package to test on your own server!',
 
         button_left: 'View our pricing',
         button_right: 'Discord server',
