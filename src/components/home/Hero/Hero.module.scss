@@ -37,17 +37,6 @@
         @media (max-width: 768px) {
             font-size: 2rem;
         }
-
-        span {
-            background: linear-gradient(
-                52deg,
-                var(--highlight-main) 3%,
-                #22b8cf 97%
-            );
-            background-clip: border-box;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
     }
 
     h2 {
