@@ -5,9 +5,6 @@ const nextConfig = {
         locales: ['en', 'fi'],
         defaultLocale: 'en',
     },
-    experimental: {
-        outputStandalone: true,
-    },
     poweredByHeader: false,
 }
 
