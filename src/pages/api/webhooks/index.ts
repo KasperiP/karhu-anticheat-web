@@ -1,5 +1,5 @@
 import mail from '@sendgrid/mail'
-import { MessageEmbed, WebhookClient } from 'discord.js'
+import { EmbedBuilder, WebhookClient } from 'discord.js'
 import { buffer } from 'micro'
 import Cors from 'micro-cors'
 import { NextApiRequest, NextApiResponse } from 'next'
@@ -69,13 +69,18 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
                 })
             }
 
-            const embed = new MessageEmbed()
+            const embed = new EmbedBuilder()
                 .setTitle('💰 Payment succeeded')
                 .setColor('#00ff00')
                 .setDescription(
                     `Payment for ${paymentIntent.amount / 100}€ was successful.`
                 )
-                .addField('Email', userEmail)
+                .addFields([
+                    {
+                        name: 'Email',
+                        value: userEmail,
+                    },
+                ])
                 .setTimestamp()
 
             await webhookClient.send({
