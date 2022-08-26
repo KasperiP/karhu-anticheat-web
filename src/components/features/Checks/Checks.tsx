@@ -9,6 +9,7 @@ import {
     BsArrowsMove,
     BsBarChartSteps,
     BsMouse2,
+    BsQuestionDiamond,
     BsSpeedometer2,
 } from 'react-icons/bs'
 import {
@@ -140,7 +141,12 @@ const Checks = () => {
                 <p>{t.features_checks.subtitle}</p>
                 {t.features_checks.checks.map((category) => (
                     <>
-                        <h2 key={category.category}>{category.category}</h2>
+                        <h2
+                            key={category.category}
+                            style={{ marginTop: '2rem' }}
+                        >
+                            {category.category}
+                        </h2>
                         <div className={styles.gridContainer}>
                             {category.checks.map((check) => (
                                 <div
@@ -153,7 +159,9 @@ const Checks = () => {
                                                 (checkIcon) =>
                                                     checkIcon.name ===
                                                     check.title
-                                            )?.[0]?.icon || <>asd</>}
+                                            )?.[0]?.icon || (
+                                                <BsQuestionDiamond />
+                                            )}
                                         </span>
                                         <h2>
                                             {check.title} (x{check.count})
