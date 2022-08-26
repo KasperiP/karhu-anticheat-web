@@ -6,7 +6,7 @@ const lang = {
         developers: 'Kehittäjät',
         purchase: 'Osta Karhu Anticheat',
     },
-    hero: {
+    home_hero: {
         name: 'Karhu Anticheat',
         title_start: 'Kehittynyt Minecraft',
         title_highlight: 'anticheat järjestelmä',
@@ -19,7 +19,7 @@ const lang = {
         button_right: 'Discord palvelin',
     },
 
-    features: {
+    home_features: {
         title: 'Mitä tarjoamme sinulle?',
         subtitle:
             'Karhun tiimi haluua tarjota sinulle parhaan mahdollisen Minecraft huijauksenestokokemuksen alhaisessa hintaluokassa. Kaikki alkoi palvelimesta, jossa ei haluttu maksaa paljoa huijauksenestoon suunnatusta järjestelmästä.',
@@ -56,7 +56,7 @@ const lang = {
             },
         ],
     },
-    pricing: {
+    home_pricing: {
         card_plan_includes: 'Paketti sisältää:',
         card_plan_view_features: 'Katso ominaisuudet',
         card_looking_download_start: 'Etsitkö latauslinkkiä?',
@@ -97,7 +97,7 @@ const lang = {
             ],
         },
     },
-    sponsor: {
+    home_sponsor: {
         title: 'Karhu Anticheat x Tietokettu.net',
         subtitle:
             'Tietokettu on suomalainen palveluntarjoaja, joka tarjoaa asiakkailleen hyvät online-palvelut halvoilla hinnoilla. Palvelumme tarjoaa tietokettu.net.',
@@ -138,6 +138,184 @@ const lang = {
         credits_build_by: 'Toteuttanut',
         credits_source_code: 'Lähdekoodi saatavilla',
         credits_rights_reserved: 'Kaikki oikeudet pidetään',
+    },
+    features_hero: {
+        name: 'Ominaisuudet',
+        title_start: 'Meillä on yli',
+        title_highlight: '100',
+        title_end: 'tarkistusta tunnistaaksemme laajan kirjon huijauskoodeja',
+        subtitle_start:
+            'Karhussa on tarkistus lähes jokaista huijauskoodia varten. Tarjoamme laajan kirjon erilaisia tarkistuksia, kuten',
+        subtitle_highlight: '3.01',
+        subtitle_end:
+            'reach tarkastuksen, sekä velocity tarkistuksen, joka tekee häikäilittömien asiakasohjelmien käytön mahdottomaksi. Kaikki tämä minimaalisella tehojen käytöllä.',
+        button_left: 'Lataa Checks.yml',
+        button_right: 'Lataa Config.yml',
+    },
+    features_checks: {
+        name: 'Meidän ominaisuutemme',
+        subtitle:
+            'Tässä on lista kaikista meidän tarkistuksistamme. Kurkkaa meidän config-tiedostot tarkemmista ominaisuuksista.',
+        checks: [
+            {
+                category: 'Taisteluhuijaukset',
+                checks: [
+                    {
+                        title: 'Autoclicker',
+                        count: 17,
+                        description:
+                            'Tarkistaa tavallisimmat virheet autoclickereissä, sekä huonon randomisaation.',
+                    },
+                    {
+                        title: 'Velocity',
+                        count: 2,
+                        description:
+                            '99.99% horisontaalinen & vertikaalinen velocity tarkistus.',
+                    },
+                    {
+                        title: 'Reach',
+                        count: 1,
+                        description:
+                            'Tarkistaa iskut yli asiakasohjelman kiintiön (3.0).',
+                    },
+                    {
+                        title: 'AimAssist',
+                        count: 12,
+                        description:
+                            'Tunnistaa virheellisesti tehdyt tähtäimenavustukset.',
+                    },
+                    {
+                        title: 'Killaura',
+                        count: 13,
+                        description:
+                            'Tarkistaa autoblockauksen, pakettijärjestyksen, sekä keepsprintin.',
+                    },
+                    {
+                        title: 'Hitbox',
+                        count: 1,
+                        description:
+                            'Tunnistaa jokaisen hitboxin laajenemisen.',
+                    },
+                    {
+                        title: 'Analysis',
+                        count: 5,
+                        description:
+                            'Heuristisia analyysejä joilla tarkistetaan kehittyneempiä killauroja. Jotkut asiakasohjelmat pystyy ohittamaan nämä tarkistukset oikeilla asetuksilla.',
+                    },
+                ],
+            },
+            {
+                category: 'Liikehuijaukset',
+                checks: [
+                    {
+                        title: 'Fly',
+                        count: 6,
+                        description:
+                            'Tunnistaa lentohuijaukset katsomalla noudattaako asiakas pelin gravitaatioformulaa.',
+                    },
+                    {
+                        title: 'Motion',
+                        count: 8,
+                        description:
+                            'Tunnistaa y-akselin modifikaatiot eri skenaarioissa.',
+                    },
+                    {
+                        title: 'Speed',
+                        count: 3,
+                        description:
+                            'Tunnistaa liikkumishuijaukset jotka ei noudata pelin x & z liikelogiikkaa.',
+                    },
+                    {
+                        title: 'Omnisprint',
+                        count: 1,
+                        description: 'Tunnistaa takaperinjuoksemisen.',
+                    },
+                    {
+                        title: 'Inventory',
+                        count: 3,
+                        description:
+                            'Tunnistaa tavaraluettelon klikkaamisen liikkuessa.',
+                    },
+                    {
+                        title: 'VehicleFly',
+                        count: 1,
+                        description: 'Tunnistaa ajoneuvoilla lentämisen.',
+                    },
+                    {
+                        title: 'Jesus',
+                        count: 2,
+                        description: 'Tunnistaa liikkumisen veden päällä.',
+                    },
+                    {
+                        title: 'Step',
+                        count: 1,
+                        description:
+                            'Tunnistaa askelmodifikaatiot yli pelin limitin (0.6).',
+                    },
+                ],
+            },
+            {
+                category: 'Packet',
+                checks: [
+                    {
+                        title: 'BadPackets',
+                        count: 18,
+                        description:
+                            'Tunnistaa mahdottomat paketit jotka johtuvat asiakasohjelman koodivirheestä.',
+                    },
+                    {
+                        title: 'Timer',
+                        count: 3,
+                        description: 'Tunnistaa pelitikkausmodifikaatiot.',
+                    },
+                    {
+                        title: 'Ping',
+                        count: 1,
+                        description:
+                            'Tunnistaa viiveen väärentämisen, vaikka tämä onkin usein jo tunnistettu muilla tarkistuksillamme.',
+                    },
+                ],
+            },
+            {
+                category: 'World',
+                checks: [
+                    {
+                        title: 'Ground',
+                        count: 3,
+                        description: 'Tunnistaa tippumisvahingon eston.',
+                    },
+                    {
+                        title: 'Scaffold',
+                        count: 18,
+                        description:
+                            'Tunnistaa häikäilemättömät scaffold huijaukset.',
+                    },
+                    {
+                        title: 'NoLookBreak',
+                        count: 1,
+                        description:
+                            'Tunnistaa palikoiden hajoittamisen katsomatta.',
+                    },
+                    {
+                        title: 'BlockReach',
+                        count: 1,
+                        description:
+                            'Tunnistaa palikoiden hajoittamisen liian kaukaa.',
+                    },
+                    {
+                        title: 'FastBreak',
+                        count: 3,
+                        description:
+                            'Tunnistaa hajoittamisen nopeampaa kuin asiakasohjelman on mahdollista.',
+                    },
+                    {
+                        title: 'GhostBreak',
+                        count: 1,
+                        description: 'Tunnistaa palikoiden läpi hajoittamisen.',
+                    },
+                ],
+            },
+        ],
     },
 }
 export default lang

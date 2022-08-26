@@ -18,8 +18,8 @@ const Sponsor = () => {
                     />
                 </div>
                 <div>
-                    <h2>{t.sponsor.title}</h2>
-                    <p>{t.sponsor.subtitle}</p>
+                    <h2>{t.home_sponsor.title}</h2>
+                    <p>{t.home_sponsor.subtitle}</p>
                 </div>
                 <div className={styles.btnContainer}>
                     <button
@@ -27,7 +27,7 @@ const Sponsor = () => {
                             window.open('https://www.tietokettu.net')
                         }
                     >
-                        {t.sponsor.button}
+                        {t.home_sponsor.button}
                     </button>
                 </div>
             </div>

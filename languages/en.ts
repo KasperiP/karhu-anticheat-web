@@ -7,7 +7,7 @@ const lang = {
         purchase: 'Purchase Karhu Anticheat',
     },
 
-    hero: {
+    home_hero: {
         name: 'Karhu Anticheat',
         title_start: 'An advanced Minecraft',
         title_highlight: 'anticheat solution',
@@ -20,7 +20,7 @@ const lang = {
         button_right: 'Discord server',
     },
 
-    features: {
+    home_features: {
         title: 'What do we offer for you?',
         subtitle:
             'Karhu team wants to offer you the best anticheat experience for low pricing, it all started from a network that didnt want to pay too much for an anticheat.',
@@ -57,7 +57,7 @@ const lang = {
             },
         ],
     },
-    pricing: {
+    home_pricing: {
         card_plan_includes: 'Plan includes:',
         card_plan_view_features: 'View features',
         card_looking_download_start: 'Looking for a download link?',
@@ -98,7 +98,7 @@ const lang = {
             ],
         },
     },
-    sponsor: {
+    home_sponsor: {
         title: 'Karhu Anticheat x Tietokettu.net',
         subtitle:
             'Tietokettu is a hosting provider located in Finland, which offers its customers high-quality online services for very cheap prices. Our hosting is provided by Tietokettu.',
@@ -139,6 +139,181 @@ const lang = {
         credits_build_by: 'Built by',
         credits_source_code: 'Source code available on',
         credits_rights_reserved: 'All rights reserved',
+    },
+    features_hero: {
+        name: 'Features',
+        title_start: 'We have over',
+        title_highlight: '100',
+        title_end: 'checks to detect large variety of cheats',
+        subtitle_start:
+            'Karhu has checks for almost every type of cheat. It offers a range of detections and features that vary from highly accurate',
+        subtitle_highlight: '3.01',
+        subtitle_end:
+            'reach and velocity detection to unbypassable blatant checks such as speed, fly, timer, and more with minimal impact on server performance! Check out our configs to see how Karhu works.',
+        button_left: 'Download Checks.yml',
+        button_right: 'Download Config.yml',
+    },
+    features_checks: {
+        name: 'Our features',
+        subtitle:
+            'Here is list of all our checks. Check out our configs above for more specific features.',
+        checks: [
+            {
+                category: 'Combat',
+                checks: [
+                    {
+                        title: 'Autoclicker',
+                        count: 17,
+                        description:
+                            'Checks for basic mistakes in clickers + bad randomization.',
+                    },
+                    {
+                        title: 'Velocity',
+                        count: 2,
+                        description:
+                            '99.99% horizontal & vertical velocity detection.',
+                    },
+                    {
+                        title: 'Reach',
+                        count: 1,
+                        description: 'Detects hits above client range (3.0).',
+                    },
+                    {
+                        title: 'AimAssist',
+                        count: 12,
+                        description:
+                            'Very basic checks to detect some bad aimassist.',
+                    },
+                    {
+                        title: 'Killaura',
+                        count: 13,
+                        description:
+                            'Checks detect autoblock, packet order and keepsprint.',
+                    },
+                    {
+                        title: 'Hitbox',
+                        count: 1,
+                        description: 'Detects any expansion of hitbox.',
+                    },
+                    {
+                        title: 'Analysis',
+                        count: 5,
+                        description:
+                            'Heuristical analysis to detect some of the more advanced killauras, can still be bypassed by many clients with right settings.',
+                    },
+                ],
+            },
+            {
+                category: 'Movement',
+                checks: [
+                    {
+                        title: 'Fly',
+                        count: 6,
+                        description:
+                            'Detects most fly hacks by checking if their movement follows game gravity formula.',
+                    },
+                    {
+                        title: 'Motion',
+                        count: 8,
+                        description:
+                            'Detects y-axis modifications in different scenarios.',
+                    },
+                    {
+                        title: 'Speed',
+                        count: 3,
+                        description:
+                            "Detect almost any movement that doesn't follow game x & z movement.",
+                    },
+                    {
+                        title: 'Omnisprint',
+                        count: 1,
+                        description: 'Detects running backwards with sprint.',
+                    },
+                    {
+                        title: 'Inventory',
+                        count: 3,
+                        description: 'Detects clicking inventory while moving.',
+                    },
+                    {
+                        title: 'VehicleFly',
+                        count: 1,
+                        description: 'Detects flying with vehicles.',
+                    },
+                    {
+                        title: 'Jesus',
+                        count: 2,
+                        description:
+                            'Very basic checks that detect liquidwalking.',
+                    },
+                    {
+                        title: 'Step',
+                        count: 1,
+                        description: 'Detects stepping over game limit (0.6).',
+                    },
+                ],
+            },
+            {
+                category: 'Packet',
+                checks: [
+                    {
+                        title: 'BadPackets',
+                        count: 18,
+                        description:
+                            'Detects impossible packets that are caused by hacked client code issues.',
+                    },
+                    {
+                        title: 'Timer',
+                        count: 3,
+                        description:
+                            'Detects game tick speed modification quickly.',
+                    },
+                    {
+                        title: 'Ping',
+                        count: 1,
+                        description:
+                            'Detects pingspoofing, altought it is already detected by flagging nearly all movement checks, reach and hitbox because of lag compensation.',
+                    },
+                ],
+            },
+            {
+                category: 'World',
+                checks: [
+                    {
+                        title: 'Ground',
+                        count: 3,
+                        description: 'Detects fall damage preventing.',
+                    },
+                    {
+                        title: 'Scaffold',
+                        count: 18,
+                        description:
+                            'Detects blatant scaffolds. God bridge style legit scaffolds still bypass this if done correctly.',
+                    },
+                    {
+                        title: 'NoLookBreak',
+                        count: 1,
+                        description:
+                            'Detects breaking block without looking at it.',
+                    },
+                    {
+                        title: 'BlockReach',
+                        count: 1,
+                        description: 'Detects breaking block too far away.',
+                    },
+                    {
+                        title: 'FastBreak',
+                        count: 3,
+                        description:
+                            'Detects breaking faster than the client can.',
+                    },
+                    {
+                        title: 'GhostBreak',
+                        count: 1,
+                        description: 'Detects breaking through blocks.',
+                    },
+                ],
+            },
+        ],
     },
 }
 export default lang
