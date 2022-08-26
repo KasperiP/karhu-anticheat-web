@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Layout from '../components/common/Layout/Layout'
+import Checks from '../components/features/Checks/Checks'
+import Hero from '../components/features/Hero/Hero'
 
 const features = () => {
     return (
@@ -12,18 +14,8 @@ const features = () => {
                 />
             </Head>
             <Layout>
-                <div
-                    style={{
-                        display: 'flex',
-                        textAlign: 'center',
-                        justifyContent: 'center',
-                    }}
-                >
-                    <h1 style={{ padding: '10rem 5rem' }}>
-                        I dont get paid enough. Pullrequest welcome of feature
-                        section :D <br />- kassq
-                    </h1>
-                </div>
+                <Hero />
+                <Checks />
             </Layout>
         </>
     )
