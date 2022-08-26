@@ -6,6 +6,7 @@ const nextConfig = {
         defaultLocale: 'en',
     },
     poweredByHeader: false,
+    output: 'standalone',
 }
 
 module.exports = nextConfig

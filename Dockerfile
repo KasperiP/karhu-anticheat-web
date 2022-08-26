@@ -3,8 +3,13 @@ FROM node:16-alpine AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
-COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile
+COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
+RUN \
+  if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
+  elif [ -f package-lock.json ]; then npm ci; \
+  elif [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i; \
+  else echo "Lockfile not found." && exit 1; \
+  fi
 
 # If using npm with a `package-lock.json` comment out above and use below instead
 # COPY package.json package-lock.json ./ 
@@ -36,11 +41,9 @@ RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
 # You only need to copy next.config.js if you are NOT using the default configuration
-COPY --from=builder /app/next.config.js ./
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/package.json ./package.json
 
-# Automatically leverage output traces to reduce image size 
+# Automatically leverage output traces to reduce image size
 # https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
