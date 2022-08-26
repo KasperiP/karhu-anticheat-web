@@ -391,10 +391,6 @@ MOVEMENT:
             mode: KICK
             banwave: false
             banwave-vl: 10
-    Move:
-        A:
-            enabled: true
-            autoban: true
     Motion:
         A:
             enabled: true
