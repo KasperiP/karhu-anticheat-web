@@ -255,7 +255,7 @@ const lang = {
                 ],
             },
             {
-                category: 'Packet',
+                category: 'Pakettihuijaukset',
                 checks: [
                     {
                         title: 'BadPackets',
@@ -277,7 +277,7 @@ const lang = {
                 ],
             },
             {
-                category: 'World',
+                category: 'Maailmahuijaukset',
                 checks: [
                     {
                         title: 'Ground',
