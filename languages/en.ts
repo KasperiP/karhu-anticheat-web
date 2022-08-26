@@ -9,14 +9,13 @@ const lang = {
 
     hero: {
         name: 'Karhu Anticheat',
-
         title_start: 'An advanced Minecraft',
         title_highlight: 'anticheat solution',
         title_end: 'for your server',
-
-        subtitle:
-            'Lightweight, customizable and reliable minecraft anticheat solution for 1.8-1.18. Test on our server test.karhu.ac or buy the trial package to test on your own server!',
-
+        subtitle_start:
+            'Lightweight, customizable and reliable Minecraft anticheat solution for 1.8-1.18. Karhu detects large variety of cheats including killaura, reach, speed and much more! Test Karhu on our server',
+        subtitle_highlight: 'test.karhu.ac',
+        subtitle_end: 'or buy the trial package to test on your own server!',
         button_left: 'View our pricing',
         button_right: 'Discord server',
     },
@@ -29,12 +28,12 @@ const lang = {
             {
                 title: 'Advanced checks',
                 subtitle:
-                    'Our checks try to simulate minecraft game actions, with simplier code. Movement checks are not 1:1 accurate, but we aim for still good accuracy.',
+                    'Our checks try to simulate Minecraft game actions, with simplier code. Movement checks are not 1:1 accurate, but we aim for still good accuracy.',
             },
             {
                 title: 'Fast support',
                 subtitle:
-                    'Our support team is fast, and will be pleased to answer your questions on our discord.',
+                    'Our support team is fast, and will be pleased to answer your questions on our Discord.',
             },
             {
                 title: 'Lightweight',
@@ -106,7 +105,7 @@ const lang = {
         button: "Let's check it out",
     },
     footer: {
-        text: 'Providing cheap anticheat service since 2020.',
+        text: 'Karhu - Providing cheap and reliable Minecraft anticheat service since 2020. Guaranteed finnish quality',
         links_title: 'Links',
         legal_title: 'Legal',
         links: [

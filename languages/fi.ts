@@ -8,14 +8,13 @@ const lang = {
     },
     hero: {
         name: 'Karhu Anticheat',
-
-        title_start: 'Kehittynyt minecraft',
+        title_start: 'Kehittynyt Minecraft',
         title_highlight: 'anticheat järjestelmä',
         title_end: 'sinun palvelimellesi',
-
-        subtitle:
-            'Kevyt, mukautettava sekä luotettava anticheat järjestelmä 1.8-1.18 palvelimille. Karhun tiimi takaa anticheatille pitkäkestoisen elinkaaren.',
-
+        subtitle_start:
+            'Kevyt, muokattava ja luotettava Minecraft huijauksenestojärjestelmä versioille 1.8-1.18. Karhu tunnistaa laajan kirjon erilaisia huijauskoodeja, kuten killauran, reachin, erinäiset speed-huijaukset sekä paljon muuta! Testaa Karhua meidän testipalvelimellamme',
+        subtitle_highlight: 'test.karhu.ac',
+        subtitle_end: 'tai osta meidän testauspakettimme!',
         button_left: 'Hinnoittelu',
         button_right: 'Discord palvelin',
     },
@@ -23,27 +22,27 @@ const lang = {
     features: {
         title: 'Mitä tarjoamme sinulle?',
         subtitle:
-            'Karhun tiimi haluua tarjota sinulle parhaan mahdollisen minecraft anticheat kokemuksen alhaisessa hintaluokassa. Kaikki alkoi palvelmesta, jossa ei haluttu maksaa paljoa anticheatista.',
+            'Karhun tiimi haluua tarjota sinulle parhaan mahdollisen Minecraft huijauksenestokokemuksen alhaisessa hintaluokassa. Kaikki alkoi palvelimesta, jossa ei haluttu maksaa paljoa huijauksenestoon suunnatusta järjestelmästä.',
         list: [
             {
                 title: 'Kehittyneet tarkistukset',
                 subtitle:
-                    'Karhun tarkistukset yrittävät replikoida minecraftin toimintoja. Liike tarkistuksr eivät ole 1:1, mutta yritämme päästä lähelle sitä.',
+                    'Karhun tarkistukset yrittävät replikoida Minecraftin toimintoja. Liike tarkistukset eivät ole 1:1, mutta yritämme päästä lähelle sitä.',
             },
             {
                 title: 'Nopea asiakaspalvelu',
                 subtitle:
-                    'Asiakaspalvelumme vastaa aina nopeasti suomeksi sekä englanniksi.',
+                    'Asiakaspalvelumme vastaa aina nopeasti suomeksi että englanniksi. Liitythän meidän Discord-palvelimelle mikäli sinulla on kysyttävää',
             },
             {
-                title: 'Höyhenen kevyt',
+                title: 'Höyhenenkevyt',
                 subtitle:
-                    'Karhu ei käytä paljon resursseja palvelimeltasi. Olemme satsanneet tuotteen nopeuteen.',
+                    'Karhu ei käytä paljon resursseja palvelimeltasi. Olemme satsanneet tuotteen nopeuteen ja se on meille tärkeää.',
             },
             {
                 title: 'Alhaiset tunnistukset',
                 subtitle:
-                    'Karhu on tarkka ja hyvä tunnistamaan erilaisia "ghost" huijaus toimintoja. Tunnistaen 3.01 reachin and 99.99% horisontaalisen & vertikaalisen knockbackin.',
+                    'Karhu on tarkka ja hyvä tunnistamaan erilaisia "ghost" huijaus toimintoja. Tunnistaen 3.01 reachin and 99.99% horisontaalisen & vertikaalisen takaisiniskun.',
             },
             {
                 title: 'Mukautettavuus',
@@ -51,9 +50,9 @@ const lang = {
                     'Karhussa voit muuttaa lähes kaiken, aina nimestä viesteihin.',
             },
             {
-                title: 'Paketti pohjainen',
+                title: 'Pakettipohjainen',
                 subtitle:
-                    'Karhu perustuu paketteihin, eikä käytä bukkitin rajapintaa toisin kuin useat muut anticheatit.',
+                    'Karhu perustuu paketteihin, eikä käytä Bukkitin rajapintaa toisin kuin useat muut anticheatit. Tämä mahdollistaa tarkan, mutta kevyen huijauksien tunnistamisen',
             },
         ],
     },
@@ -64,19 +63,19 @@ const lang = {
         card_looking_download_end: 'Liity meidän',
         card_pricing: 'Hinnastomme',
         card_pricing_subtitle:
-            'Meillä on erittäin edullinen hinnasto verrattuna toisiin huijauksenestoihin.',
+            'Meillä on erittäin edullinen hinnasto verrattuna toisiin huijauksenestojärjestelmiin.',
 
         card1: {
             desc_title_start: 'Valmiina pysäyttämään',
             desc_title_highlight: 'huijarit',
             desc_subtitle_start:
-                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati consectetur possimus fuga nulla unde quibusdam molestiae cum labore atque earum?',
+                'Me haluamme tarjota sinulle halvan ja luotettavan tavan estää huijareita pilaamasta oikeiden pelaajien pelikokemus.',
             desc_subtitle_end:
-                'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, voluptatem.',
+                'Pelaajillasi on mukavampaa pelata tietäen ettei vastustaja käytä erinäisiä huijauskoodeja.',
         },
         card2: {
             title: 'Epävarma? Osta kokeilu ensin!',
-            desc_title: 'Trial',
+            desc_title: 'Kokeilupaketti',
             desc_duration: '7 päivän paketti',
             desc_purchase: 'Osta kokeilu paketti',
             price: '5€',
@@ -102,27 +101,27 @@ const lang = {
         title: 'Karhu Anticheat x Tietokettu.net',
         subtitle:
             'Tietokettu on suomalainen palveluntarjoaja, joka tarjoaa asiakkailleen hyvät online-palvelut halvoilla hinnoilla. Palvelumme tarjoaa tietokettu.net.',
-        button: "Katso tästä!",
+        button: 'Katso tästä!',
     },
     footer: {
-        text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus sapiente vitae perspiciatis harum nostrum, neque quisquam esse quaerat consectetur nesciunt.',
+        text: 'Karhu - Halpaa ja luotettavaa Minecraft huijauksenestoa jo vuodesta 2020. Taattua suomalaista laatua.',
         links_title: 'Linkit',
-        legal_title: 'Legal',
+        legal_title: 'Käyttöehdot',
         links: [
             {
-                title: 'Home',
+                title: 'Koti',
                 url: '/',
             },
             {
-                title: 'Features',
+                title: 'Ominaisuudet',
                 url: '/features',
             },
             {
-                title: 'Pricing',
+                title: 'Hinnoittelu',
                 url: '/#pricing',
             },
             {
-                title: 'Developers',
+                title: 'Kehittäjille',
                 url: 'https://github.com/Karhu-Anticheat/KarhuAPI',
             },
         ],
