@@ -41,37 +41,40 @@ const Pricing = () => {
 
     return (
         <div className={styles.container} id="pricing">
-            <h2>{t.pricing.card_pricing}</h2>
-            <p>{t.pricing.card_pricing_subtitle}</p>
+            <h2>{t.home_pricing.card_pricing}</h2>
+            <p>{t.home_pricing.card_pricing_subtitle}</p>
             <div className={styles.gridContainer}>
                 <div className={styles.gridItem}>
                     <h2>
-                        {t.pricing.card1.desc_title_start}{' '}
-                        <strong>{t.pricing.card1.desc_title_highlight}</strong>?
+                        {t.home_pricing.card1.desc_title_start}{' '}
+                        <strong>
+                            {t.home_pricing.card1.desc_title_highlight}
+                        </strong>
+                        ?
                     </h2>
                     <p>
-                        {t.pricing.card1.desc_subtitle_start}
+                        {t.home_pricing.card1.desc_subtitle_start}
                         <br />
                         <br />
-                        {t.pricing.card1.desc_subtitle_end}
+                        {t.home_pricing.card1.desc_subtitle_end}
                     </p>
                 </div>
                 <div className={styles.gridItem}>
                     <div className={styles.outTitle}>
-                        <h2>{t.pricing.card2.title}</h2>
+                        <h2>{t.home_pricing.card2.title}</h2>
                     </div>
                     <div className={`${styles.card} ${styles.trial}`}>
                         <div className={styles.cardTitle}>
-                            <h2>{t.pricing.card2.desc_title}</h2>
+                            <h2>{t.home_pricing.card2.desc_title}</h2>
                             <span>
-                                <h3>{t.pricing.card2.price}</h3>
-                                <p>{t.pricing.card2.desc_duration}</p>
+                                <h3>{t.home_pricing.card2.price}</h3>
+                                <p>{t.home_pricing.card2.desc_duration}</p>
                             </span>
                         </div>
                         <div className={styles.cardContent}>
                             <div>
-                                <p>{t.pricing.card_plan_includes}</p>
-                                {t.pricing.card2.features.map(
+                                <p>{t.home_pricing.card_plan_includes}</p>
+                                {t.home_pricing.card2.features.map(
                                     (feature, index) => {
                                         return (
                                             <div
@@ -90,14 +93,14 @@ const Pricing = () => {
                             <div className={styles.btnContainer}>
                                 <div>
                                     <Link href="/features">
-                                        {t.pricing.card_plan_view_features}
+                                        {t.home_pricing.card_plan_view_features}
                                     </Link>
                                     <AiOutlineArrowRight />
                                 </div>
                                 <button onClick={() => handlePurchase('trial')}>
                                     {loading === 'trial'
                                         ? 'Loading...'
-                                        : t.pricing.card2.desc_purchase}
+                                        : t.home_pricing.card2.desc_purchase}
                                 </button>
                             </div>
                         </div>
@@ -106,9 +109,9 @@ const Pricing = () => {
                 <div className={styles.gridItem}>
                     <div className={styles.outTitle}>
                         <p>
-                            {t.pricing.card_looking_download_start}
+                            {t.home_pricing.card_looking_download_start}
                             <br />
-                            {t.pricing.card_looking_download_end}
+                            {t.home_pricing.card_looking_download_end}
                             <Link href="https://discord.gg/cMY4xKRrW4" passHref>
                                 <a target="_blank"> Discord-server</a>
                             </Link>
@@ -117,16 +120,16 @@ const Pricing = () => {
                     </div>
                     <div className={`${styles.card} ${styles.premium}`}>
                         <div className={styles.cardTitle}>
-                            <h2>{t.pricing.card3.desc_title}</h2>
+                            <h2>{t.home_pricing.card3.desc_title}</h2>
                             <span>
-                                <h3>{t.pricing.card3.price}</h3>
-                                <p>{t.pricing.card3.desc_duration}</p>
+                                <h3>{t.home_pricing.card3.price}</h3>
+                                <p>{t.home_pricing.card3.desc_duration}</p>
                             </span>
                         </div>
                         <div className={styles.cardContent}>
                             <div>
-                                <p>{t.pricing.card_plan_includes}</p>
-                                {t.pricing.card3.features.map(
+                                <p>{t.home_pricing.card_plan_includes}</p>
+                                {t.home_pricing.card3.features.map(
                                     (feature, index) => {
                                         return (
                                             <div
@@ -145,7 +148,7 @@ const Pricing = () => {
                             <div className={styles.btnContainer}>
                                 <div>
                                     <Link href="/features">
-                                        {t.pricing.card_plan_view_features}
+                                        {t.home_pricing.card_plan_view_features}
                                     </Link>
                                     <AiOutlineArrowRight />
                                 </div>
@@ -154,7 +157,7 @@ const Pricing = () => {
                                 >
                                     {loading === 'premium'
                                         ? 'Loading...'
-                                        : t.pricing.card3.desc_purchase}
+                                        : t.home_pricing.card3.desc_purchase}
                                 </button>
                             </div>
                         </div>

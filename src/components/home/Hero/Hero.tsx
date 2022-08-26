@@ -11,22 +11,29 @@ const Hero = () => {
     return (
         <section className={styles.container}>
             <div>
-                <h2>{t.hero.name}</h2>
+                <h2>{t.home_hero.name}</h2>
                 <h1>
-                    {t.hero.title_start} <span>{t.hero.title_highlight}</span>{' '}
-                    {t.hero.title_end}
+                    {t.home_hero.title_start}{' '}
+                    <span className="gradientText">
+                        {t.home_hero.title_highlight}
+                    </span>{' '}
+                    {t.home_hero.title_end}
                 </h1>
-                <p>{t.hero.subtitle}</p>
+                <p>
+                    {t.home_hero.subtitle_start}
+                    <strong> {t.home_hero.subtitle_highlight} </strong>
+                    {t.home_hero.subtitle_end}
+                </p>
                 <div className={styles.buttons}>
                     <button onClick={() => router.push('/#pricing')}>
-                        {t.hero.button_left}
+                        {t.home_hero.button_left}
                     </button>
                     <button
                         onClick={() =>
                             window.open('https://discord.gg/cMY4xKRrW4')
                         }
                     >
-                        {t.hero.button_right}
+                        {t.home_hero.button_right}
                     </button>
                 </div>
             </div>
