@@ -23,7 +23,7 @@ const lang = {
     home_features: {
         title: 'What do we offer for you?',
         subtitle:
-            'Karhu team wants to offer you the best anticheat experience for low pricing, it all started from a network that didnt want to pay too much for an anticheat.',
+            "Karhu team wants to offer you the best anticheat experience for low pricing, it all started from a network that didn't want to pay too much for an anticheat.",
         list: [
             {
                 title: 'Advanced checks',
@@ -53,7 +53,7 @@ const lang = {
             {
                 title: 'Packet based',
                 subtitle:
-                    'Unlike some other anticheats on the market, we track stuff with packets and not with spigot api or bukkit events.',
+                    'Unlike some other anticheats on the market, we track actions with packets and not with spigot api or bukkit events.',
             },
         ],
     },
