@@ -57,7 +57,7 @@ const Footer = () => {
                     </Link>
                     .
                     <br />
-                    2022 &copy; Karhu Anticheat -{' '}
+                    {new Date().getFullYear()} &copy; Karhu Anticheat -{' '}
                     {t.footer.credits_rights_reserved}
                 </div>
             </div>
