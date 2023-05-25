@@ -33,7 +33,7 @@ export default function Document() {
 
                 <meta
                     name="description"
-                    content="Karhu Anticheat is an advanced Minecraft-anticheat that detects large variety of cheats and works on versions 1.7.10 - 1.18.2. Don't let cheaters ruin your day!"
+                    content="Karhu Anticheat is an advanced Minecraft-anticheat that detects large variety of cheats and works on versions 1.8.8 - 1.18.2. Don't let cheaters ruin your day!"
                 />
                 <meta
                     name="keywords"
@@ -53,7 +53,7 @@ export default function Document() {
                 <meta property="og:url" content="https://www.karhu.ac" />
                 <meta
                     property="og:description"
-                    content="Karhu Anticheat is an advanced Minecraft-anticheat that detects large variety of cheats and works on versions 1.7.10 - 1.18.2. Don't let cheaters ruin your day!"
+                    content="Karhu Anticheat is an advanced Minecraft-anticheat that detects large variety of cheats and works on versions 1.8.8 - 1.18.2. Don't let cheaters ruin your day!"
                 />
             </Head>
             <body>
