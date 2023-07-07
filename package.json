@@ -30,7 +30,7 @@
         "eslint": "8.22.0",
         "eslint-config-next": "12.2.5",
         "prettier": "^2.7.1",
-        "stylelint": "^14.11.0",
+        "stylelint": "^15.10.1",
         "stylelint-config-prettier-scss": "^0.0.1",
         "stylelint-config-standard-scss": "^5.0.0",
         "stylelint-order": "^5.0.0",
