@@ -13,7 +13,7 @@
         "discord.js": "^14.3.0",
         "micro": "^9.4.1",
         "micro-cors": "^0.1.1",
-        "mongoose": "^6.5.3",
+        "mongoose": "^6.11.3",
         "next": "^12.2.5",
         "react": "18.2.0",
         "react-dom": "18.2.0",
