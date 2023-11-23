@@ -27,10 +27,9 @@ jobs:
             - name: Publish to Registry
               uses: elgohr/Publish-Docker-Github-Action@v5
               with:
-                  name: kasperip/karhuanticheatweb/nextjs
-                  registry: ghcr.io
-                  username: ${{ secrets.GIT_USERNAME }}
-                  password: ${{ secrets.GIT_TOKEN }}
+                  name: kassq/karhuanticheatweb
+                  username: ${{ secrets.DOCKER_USERNAME }}
+                  password: ${{ secrets.DOCKER_PASSWORD }}
                   dockerfile: Dockerfile
 
             - name: Deploy package to VPS
@@ -45,8 +44,8 @@ jobs:
                   port: 22
                   envs: GITHUB_USERNAME, GITHUB_TOKEN
                   script: |
-                      docker login ghcr.io -u $GITHUB_USERNAME -p $GITHUB_TOKEN
-                      docker pull ghcr.io/kasperip/karhuanticheatweb/nextjs:latest
+                      docker login -u $GITHUB_USERNAME -p $GITHUB_TOKEN
+                      docker pull kassq/karhuanticheatweb:latest
                       docker stop karhuanticheatweb
                       docker system prune -f
-                      docker run --name karhuanticheatweb -dit -p 3000:3000 --env-file ~/karhu-env/.env.local ghcr.io/kasperip/karhuanticheatweb/nextjs:latest
+                      docker run --name karhuanticheatweb -dit -p 3000:3000 --env-file ~/karhu-env/.env.local kassq/karhuanticheatweb:latest
