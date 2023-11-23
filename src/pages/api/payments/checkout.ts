@@ -31,7 +31,7 @@ export default async function handler(
 
             const premium = {
                 name: 'Karhu Anticheat - Premium (lifetime)',
-                amount: formatAmountForStripe(25, CURRENCY),
+                amount: formatAmountForStripe(20, CURRENCY),
                 currency: CURRENCY,
                 quantity: 1,
             }
