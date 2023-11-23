@@ -35,14 +35,14 @@ jobs:
             - name: Deploy package to VPS
               uses: appleboy/ssh-action@master
               env:
-                  GITHUB_USERNAME: ${{ secrets.GIT_USERNAME }}
-                  GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+                  DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+                  DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
               with:
                   host: ${{ secrets.HOST }}
                   username: ${{ secrets.USERNAME }}
                   password: ${{ secrets.PASSWORD }}
                   port: 22
-                  envs: GITHUB_USERNAME, GITHUB_TOKEN
+                  envs: DOCKER_USERNAME, DOCKER_PASSWORD
                   script: |
                       docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
                       docker pull kassq/karhuanticheatweb:latest
