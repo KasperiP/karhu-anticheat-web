@@ -30,7 +30,7 @@ jobs:
           - name: Build Docker image
             if: github.event_name == 'push' && github.ref == 'refs/heads/main'  # Change the branch name here
             run: |
-              docker build -f apps/backend/Dockerfile . -t kassq/karhuanticheatweb:latest --no-cache
+              docker build -f Dockerfile . -t kassq/karhuanticheatweb:latest --no-cache
               docker images
           - name: Log in to Docker Hub
             if: github.event_name == 'push' && github.ref == 'refs/heads/main'  # Change the branch name here
