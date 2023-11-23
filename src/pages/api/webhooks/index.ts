@@ -93,8 +93,8 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
             const license = await generateLicense(5, 5)
 
-            // Check if price is 25€ === premium
-            const isPremium = paymentIntent.amount == 2500
+            // Check if price is 20€ === premium
+            const isPremium = paymentIntent.amount == 2000
 
             // Create expiry date which is 7 days from now
             const expiryDate = new Date(
