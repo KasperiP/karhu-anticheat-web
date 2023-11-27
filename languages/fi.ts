@@ -88,7 +88,7 @@ const lang = {
             desc_title: 'Premium',
             desc_duration: 'Elinikäinen paketti',
             desc_purchase: 'Osta elinikäinen paketti',
-            price: 'BLACKFRIDAY! 20€ normaalisti 25€',
+            price: '25€',
             features: [
                 'Yli 100 tarkistusta',
                 'Nopea asiakaspalvelu',
