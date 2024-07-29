@@ -95,7 +95,7 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
             // Check if price is 25€ === premium
             //const isPremium = paymentIntent.amount == 2500
-            const isPremium = paymentIntent.name.toString().toLowerCase().includes("premium")
+            const isPremium = paymentIntent.line_items.name.toString().toLowerCase().includes("premium")
 
             // Create expiry date which is 7 days from now
             const expiryDate = new Date(
