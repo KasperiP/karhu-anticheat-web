@@ -57,7 +57,6 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
             const charge = paymentIntent.charges.data[0]
 
             const userEmail = charge.billing_details.email
-            const items = paymentIntent.description
             
             const webhookClient = new WebhookClient({
                 url: process.env.DISCORD_WEBHOOK_URL!,
@@ -96,7 +95,7 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 
             // Check if price is 25€ === premium
             //const isPremium = paymentIntent.amount == 2500
-            const isPremium = items!.toLowerCase().includes("premium")
+            const isPremium = paymentIntent.amount == 2500
 
             // Create expiry date which is 7 days from now
             const expiryDate = new Date(
