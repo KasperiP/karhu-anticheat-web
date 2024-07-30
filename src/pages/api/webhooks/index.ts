@@ -57,8 +57,8 @@ const webhookHandler = async (req: NextApiRequest, res: NextApiResponse) => {
             const charge = paymentIntent.charges.data[0]
 
             const userEmail = charge.billing_details.email
-            const items = paymentIntent.line_items.data.reference
-
+            const items = paymentIntent.description
+            
             const webhookClient = new WebhookClient({
                 url: process.env.DISCORD_WEBHOOK_URL!,
             })
