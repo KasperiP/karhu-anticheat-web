@@ -1,43 +1,12 @@
 import Link from 'next/link'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { AiOutlineArrowRight } from 'react-icons/ai'
 import { IoIosCheckmark } from 'react-icons/io'
 import LanguageContext from '../../../context/LanguageContext'
-import { fetchPostJSON } from '../../../lib/api-helpers'
-import getStripe from '../../../lib/stripe/get-stripejs'
 import styles from './Pricing.module.scss'
 
 const Pricing = () => {
     const { t } = useContext(LanguageContext)
-
-    const [loading, setLoading] = useState<'premium' | 'trial' | null>(null)
-
-    const handlePurchase = async (item: 'premium' | 'trial') => {
-        setLoading(item)
-        // Create a Checkout Session.
-        const response = await fetchPostJSON('/api/payments/checkout', {
-            item,
-        })
-
-        if (response.statusCode === 500) {
-            console.error(response.message)
-            return
-        }
-
-        // Redirect to Checkout.
-        const stripe = await getStripe()
-        const { error } = await stripe!.redirectToCheckout({
-            // Make the id field from the Checkout Session creation API response
-            // available to this file, so you can provide it as parameter here
-            // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
-            sessionId: response.id,
-        })
-        // If `redirectToCheckout` fails due to a browser or network
-        // error, display the localized error message to your customer
-        // using `error.message`.
-        console.warn(error.message)
-        setLoading(null)
-    }
 
     return (
         <div className={styles.container} id="pricing">
@@ -97,11 +66,16 @@ const Pricing = () => {
                                     </Link>
                                     <AiOutlineArrowRight />
                                 </div>
-                                <button onClick={() => handlePurchase('trial')}>
-                                    {loading === 'trial'
-                                        ? 'Loading...'
-                                        : t.home_pricing.card2.desc_purchase}
-                                </button>
+                                <a
+                                    className={styles.pricingLink}
+                                    href={
+                                        'https://buy.stripe.com/5kA3g9bOA8aPe6k288'
+                                    }
+                                >
+                                    <span>
+                                        {t.home_pricing.card2.desc_purchase}
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -152,13 +126,14 @@ const Pricing = () => {
                                     </Link>
                                     <AiOutlineArrowRight />
                                 </div>
-                                <button
-                                    onClick={() => handlePurchase('premium')}
+                                <a
+                                    className={styles.pricingLinkPremium}
+                                    href="https://buy.stripe.com/eVa2c5cSEdv92nCaEF"
                                 >
-                                    {loading === 'premium'
-                                        ? 'Loading...'
-                                        : t.home_pricing.card3.desc_purchase}
-                                </button>
+                                    <span>
+                                        {t.home_pricing.card3.desc_purchase}
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     </div>
