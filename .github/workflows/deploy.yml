@@ -2,63 +2,63 @@ name: Build and Deploy
 
 on:
     push:
-      branches: ['main']
+        branches: ['main']
 
 jobs:
     build:
         name: Build
         timeout-minutes: 15
         runs-on: ubuntu-latest
-        
-        steps:
-          - name: Check out code
-            uses: actions/checkout@v3
-            with:
-              fetch-depth: 2
-    
-          - name: Setup Node.js environment
-            uses: actions/setup-node@v3
-            with:
-              node-version: 18
-    
-          - name: Install dependencies
-            run: npm i
-    
-          - name: Build
-            run: npm run build
-    
-          - name: Build Docker image
-            if: github.event_name == 'push' && github.ref == 'refs/heads/main'  # Change the branch name here
-            run: |
-              docker build -f Dockerfile . -t kassq/karhuanticheatweb:latest --no-cache
-              docker images
-          - name: Log in to Docker Hub
-            if: github.event_name == 'push' && github.ref == 'refs/heads/main'  # Change the branch name here
-            run: |
-              echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
-            env:
-              DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-              DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-    
-          - name: Push Docker image to Docker Hub
-            if: github.event_name == 'push' && github.ref == 'refs/heads/main'  # Change the branch name here
-            run: |
-              docker push kassq/karhuanticheatweb:latest
 
-          - name: Deploy package to VPS
-            uses: appleboy/ssh-action@master
-            env:
-              DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-              DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-            with:
-                host: ${{ secrets.HOST }}
-                username: ${{ secrets.USERNAME }}
-                password: ${{ secrets.PASSWORD }}
-                port: 22
-                envs: DOCKER_USERNAME, DOCKER_PASSWORD
-                script: |
-                    docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-                    docker pull kassq/karhuanticheatweb:latest
-                    docker stop karhuanticheatweb
-                    docker system prune -f
-                    docker run --name karhuanticheatweb -dit -p 3000:3000 --env-file ~/karhu-env/.env.local kassq/karhuanticheatweb:latest
+        steps:
+            - name: Check out code
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 2
+
+            - name: Setup Node.js environment
+              uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+
+            - name: Install dependencies
+              run: npm i
+
+            - name: Build
+              run: npm run build
+
+            - name: Build Docker image
+              if: github.event_name == 'push' && github.ref == 'refs/heads/main' # Change the branch name here
+              run: |
+                  docker build -f Dockerfile . -t kassq/karhuanticheatweb:latest --no-cache
+                  docker images
+            - name: Log in to Docker Hub
+              if: github.event_name == 'push' && github.ref == 'refs/heads/main' # Change the branch name here
+              run: |
+                  echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+              env:
+                  DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+                  DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
+            - name: Push Docker image to Docker Hub
+              if: github.event_name == 'push' && github.ref == 'refs/heads/main' # Change the branch name here
+              run: |
+                  docker push kassq/karhuanticheatweb:latest
+
+            - name: Deploy package to VPS
+              uses: appleboy/ssh-action@master
+              env:
+                  DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+                  DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+              with:
+                  host: ${{ secrets.HOST }}
+                  username: ${{ secrets.USERNAME }}
+                  key: ${{ secrets.SSH_KEY }}
+                  port: 22
+                  envs: DOCKER_USERNAME, DOCKER_PASSWORD
+                  script: |
+                      docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+                      docker pull kassq/karhuanticheatweb:latest
+                      docker stop karhuanticheatweb
+                      docker system prune -f
+                      docker run --name karhuanticheatweb -dit -p 3000:3000 --env-file ~/karhu-env/.env.local kassq/karhuanticheatweb:latest
