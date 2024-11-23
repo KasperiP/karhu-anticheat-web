@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { FaDiscord } from 'react-icons/fa'
 import { RiArrowDropDownLine } from 'react-icons/ri'
@@ -12,6 +12,7 @@ const Navbar = () => {
     const { locale, t } = useContext(LanguageContext)
     const [navbarOpen, setNavbarOpen] = useState(false)
     const [languageMenu, setLanguageMenu] = useState(false)
+    const [scrolled, setScrolled] = useState(false)
     const router = useRouter()
 
     const supportedLanguages = [
@@ -24,6 +25,14 @@ const Navbar = () => {
         router.push(router.asPath, router.asPath, { locale: locale })
         setLanguageMenu(false)
     }
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 20)
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     const LangBtn = () => {
         return (
@@ -60,7 +69,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className={styles.wrapper}>
+        <nav className={`${styles.wrapper} ${scrolled ? styles.scrolled : ''}`}>
             <div className={styles.container}>
                 <div>
                     <span

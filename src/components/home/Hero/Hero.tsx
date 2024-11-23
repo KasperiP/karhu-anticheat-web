@@ -20,18 +20,22 @@ const Hero = () => {
                     {t.home_hero.title_end}
                 </h1>
                 <p>
-                    {t.home_hero.subtitle_start}
-                    <strong> {t.home_hero.subtitle_highlight} </strong>
+                    {t.home_hero.subtitle_start}{' '}
+                    <strong>{t.home_hero.subtitle_highlight}</strong>{' '}
                     {t.home_hero.subtitle_end}
                 </p>
                 <div className={styles.buttons}>
-                    <button onClick={() => router.push('/#pricing')}>
+                    <button
+                        onClick={() => router.push('/#pricing')}
+                        aria-label="View pricing"
+                    >
                         {t.home_hero.button_left}
                     </button>
                     <button
                         onClick={() =>
                             window.open('https://discord.gg/cMY4xKRrW4')
                         }
+                        aria-label="Join Discord"
                     >
                         {t.home_hero.button_right}
                     </button>
@@ -41,7 +45,7 @@ const Hero = () => {
                 <Image
                     priority
                     src="/hero.svg"
-                    alt="Hero image"
+                    alt="Hero illustration"
                     objectFit="contain"
                     layout="fill"
                 />

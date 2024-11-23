@@ -1,8 +1,15 @@
 @use '/src/styles/mixins';
 
 .wrapper {
-    height: 5rem;
-    border-bottom: 1px solid #e9ecef;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    z-index: 1000;
 }
 
 .container {
@@ -19,26 +26,54 @@
     }
 }
 
-.links a {
-    color: var(--text-main);
-    font-weight: 500;
+.links {
+    a {
+        position: relative;
+        color: var(--text-main);
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        transition: color 0.2s ease;
 
-    &:hover {
-        text-decoration: underline;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 1rem;
+            right: 1rem;
+            height: 2px;
+            background: currentColor;
+            transform: scaleX(0);
+            transition: transform 0.2s ease;
+            opacity: 0.3;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: var(--highlight-main);
+
+            &:after {
+                transform: scaleX(1);
+            }
+        }
     }
 }
 
 .buttons > a {
     display: flex;
-    gap: 5px;
+    gap: 8px;
     align-items: center;
-    height: 50%;
-    padding: 5px 20px;
-    border-radius: var(--border-radius);
+    height: 2.5rem;
+    padding: 0 1.5rem;
+    border-radius: 50px;
     background-color: var(--highlight-main);
     color: var(--text-secondary);
-    font-weight: 500;
-    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.1);
+    }
 }
 
 .langBtn {
@@ -52,9 +87,17 @@
     color: var(--text-main);
     font-weight: 500;
     cursor: pointer;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s ease;
 
     @media (max-width: 768px) {
         font-size: 1.2rem;
+    }
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.02);
     }
 
     > span {
@@ -112,6 +155,17 @@
     width: 100%;
     background-color: #f9f9f9;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 20px 40px rgb(0 0 0 / 20%);
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.98);
+    transition: transform 0.3s ease;
+
+    &.mobileOpen {
+        transform: translateY(0);
+    }
+
+    &.mobileClosed {
+        transform: translateY(-100%);
+    }
 
     button {
         width: 100%;
@@ -120,19 +174,33 @@
         color: var(--text-secondary);
         font-size: 1rem;
         cursor: pointer;
+        border-radius: 50px;
+        margin: 1rem 2rem;
+        width: calc(100% - 4rem);
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
     }
 
     a {
         width: 100%;
         padding: 1.2rem 0;
         padding-left: 2rem;
-        border-top: 1px solid rgb(128 128 128 / 36.4%);
+        border-top: 1px solid rgba(0, 0, 0, 0.04);
         color: var(--text-main);
         font-size: 1rem;
         text-align: left;
+        border-color: rgba(0, 0, 0, 0.04);
+        transition: background-color 0.2s ease;
 
         &:last-child {
             border-bottom: 1px solid rgb(128 128 128 / 36.4%);
+        }
+
+        &:hover {
+            background-color: rgba(0, 0, 0, 0.015);
         }
     }
 }
@@ -156,7 +224,10 @@
     border-radius: var(--border-radius);
     background-color: #fff;
     color: var(--text-main);
-    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 20px 40px rgb(0 0 0 / 20%);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05), 0 10px 15px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
 
     span {
         padding: 0.5rem 0;
@@ -166,13 +237,14 @@
         font-weight: 500;
         text-align: center;
         cursor: pointer;
+        transition: background-color 0.2s ease;
 
         &:hover {
-            background-color: rgb(128 128 128 / 8.2%);
+            background-color: rgba(0, 0, 0, 0.02);
         }
     }
 
     .active {
-        background-color: rgb(128 128 128 / 8.2%);
+        background-color: rgba(0, 0, 0, 0.03);
     }
 }

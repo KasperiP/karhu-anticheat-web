@@ -19,7 +19,7 @@ const Features = () => {
                     <div className={styles.gridItem}>
                         <div>
                             <span>
-                                <GiSwordInStone />
+                                <GiSwordInStone style={{ color: '#fff' }} />
                             </span>
                             <h2>{t.home_features.list[0].title}</h2>
                         </div>
@@ -28,7 +28,7 @@ const Features = () => {
                     <div className={styles.gridItem}>
                         <div>
                             <span>
-                                <BiSupport />
+                                <BiSupport style={{ color: '#fff' }} />
                             </span>
                             <h2>{t.home_features.list[1].title}</h2>
                         </div>
@@ -37,7 +37,7 @@ const Features = () => {
                     <div className={styles.gridItem}>
                         <div>
                             <span>
-                                <GiFeatheredWing />
+                                <GiFeatheredWing style={{ color: '#fff' }} />
                             </span>
                             <h2>{t.home_features.list[2].title}</h2>
                         </div>
@@ -46,7 +46,7 @@ const Features = () => {
                     <div className={styles.gridItem}>
                         <div>
                             <span>
-                                <FaGhost />
+                                <FaGhost style={{ color: '#fff' }} />
                             </span>
                             <h2>{t.home_features.list[3].title}</h2>
                         </div>
@@ -55,7 +55,7 @@ const Features = () => {
                     <div className={styles.gridItem}>
                         <div>
                             <span>
-                                <BsFillGearFill />
+                                <BsFillGearFill style={{ color: '#fff' }} />
                             </span>
                             <h2>{t.home_features.list[4].title}</h2>
                         </div>
@@ -64,7 +64,7 @@ const Features = () => {
                     <div className={styles.gridItem}>
                         <div>
                             <span>
-                                <AiOutlineDropbox />
+                                <AiOutlineDropbox style={{ color: '#fff' }} />
                             </span>
                             <h2>{t.home_features.list[5].title}</h2>
                         </div>
