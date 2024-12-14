@@ -128,11 +128,11 @@ const lang = {
         legal: [
             {
                 title: 'Terms and Conditions',
-                url: '#',
+                url: '/terms-of-service',
             },
             {
                 title: 'Privacy policy',
-                url: '#',
+                url: '/privacy-policy',
             },
         ],
         credits_build_by: 'Toteuttanut',
